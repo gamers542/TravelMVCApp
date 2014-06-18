@@ -1,0 +1,38 @@
+﻿body 
+{
+    background-color:aqua;
+    font-family: sans-serif;
+}
+#header 
+{
+    background-color:darkorange;
+    margin: 0 auto; 
+}
+* { 
+margin: 0; 
+padding: 0; 
+list-style: none; 
+color: inherit; 
+text-decoration: none; 
+}
+.subtop { 
+display: none; 
+}
+.subtop li { 
+background: #333; 
+color: #fff; 
+padding: 4px 2px; 
+border-bottom: 1px solid #e0e0e0; 
+}
+.top{ 
+overflow: hidden; 
+}
+.top > li { 
+float: left; 
+width: 100px; 
+padding: 4px 0; 
+background: #e0e0e0; 
+}
+.top > li:hover ul { 
+display: block; 
+}

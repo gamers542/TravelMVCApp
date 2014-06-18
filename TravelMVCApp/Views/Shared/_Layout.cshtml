@@ -2,45 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+       <title>Rays</title>
+        <link href="@Url.Content("~/Content/TravelSite.css")" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
+        <div id ="header">
+            <div id="headcenter">
+                Michael C's Interstate Travel Site
             </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <ul class="top">
+                <li><a>Nintendo</a>
+                    <ul class="subtop">
+                        <li><a href="~/Views/Home/About">Games</a></li>
+                    </ul>
+                </li>
+                <li><a>Sony</a>
+                    <ul class="subtop">
+                        <li><a href="~/Views/Home/Contact">Games</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
+                @RenderBody()
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
