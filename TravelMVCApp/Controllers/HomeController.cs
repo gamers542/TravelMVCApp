@@ -14,5 +14,10 @@ namespace TravelMVCApp.Controllers
 
             return View();
         }
+        public ActionResult Link()
+        {
+            ViewBag.Message = "This links here";
+            return View();
+        }
     }
 }
