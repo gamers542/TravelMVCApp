@@ -9,14 +9,19 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <div id ="header">
+        <!--<div id ="header">
             <div id="headcenter">
                 Michael C's Interstate Travel Site
             </div>
             <ul class="top">
-                <li><a>Nintendo</a>
+                <li><a>Interstates</a>
                     <ul class="subtop">
-                        <li>@Html.ActionLink("2-Digit","Index","Link")</li>
+                        <li>@Html.ActionLink("2-Digit","Index","Link")
+                            <ul class ="subtop2">
+                            <li>241</li>
+                        </ul>
+                        </li>
+                        <li>@Html.ActionLink("3-Digit","Index","Link")</li>
                     </ul>
                 </li>
                 <li><a>Sony</a>
@@ -25,9 +30,34 @@
                     </ul>
                 </li>
             </ul>
+        </div>-->
+        <div id="container">
+            <div id="headcenter">
+                    Michael C's Interstate Travel Site
+                </div>
+            <div id ="header">
+               <ul class="top">
+                <li><a>Interstates</a>
+                    <ul class="subtop">
+                        <li>@Html.ActionLink("2-Digit","Index","Link")
+                            <ul class ="subtop2">
+                            <li>241</li>
+                        </ul>
+                        </li>
+                        <li>@Html.ActionLink("3-Digit","Index","Link")</li>
+                    </ul>
+                </li><li><a>Sony</a>
+                    <ul class="subtop">
+                        <li><a href="~/Views/Home/Contact">Games</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div id="main">
+               this is  box
+                    @RenderBody()
+                </div>
         </div>
-                @RenderBody()
-
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>
