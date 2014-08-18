@@ -9,55 +9,63 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <!--<div id ="header">
+        <div id ="header">
             <div id="headcenter">
                 Michael C's Interstate Travel Site
             </div>
             <ul class="top">
-                <li><a>Interstates</a>
+                <li><a>Interstates by Number of Digits</a>
                     <ul class="subtop">
+                        <li>@Html.ActionLink("Single Digit","Index","Link")
                         <li>@Html.ActionLink("2-Digit","Index","Link")
                             <ul class ="subtop2">
-                            <li>241</li>
-                        </ul>
+                                <li>@Html.ActionLink("10s","Index","Link")</li>
+                                <li>@Html.ActionLink("20s","Index","Link")</li>
+                                <li>@Html.ActionLink("30s","Index","Link")</li>
+                                <li>@Html.ActionLink("40s","Index","Link")</li>
+                                <li>@Html.ActionLink("50s","Index","Link")</li>
+                                <li>@Html.ActionLink("60s","Index","Link")</li>
+                                <li>@Html.ActionLink("70s","Index","Link")</li>
+                                <li>@Html.ActionLink("80s","Index","Link")</li>
+                                <li>@Html.ActionLink("90s","Index","Link")</li>
+                            </ul>
                         </li>
-                        <li>@Html.ActionLink("3-Digit","Index","Link")</li>
+                        <li>@Html.ActionLink("3-Digit","Index","Link")
+                            <ul class ="subtop3">
+                                <li>@Html.ActionLink("100s","Index","Link")</li>
+                                <li>@Html.ActionLink("200s","Index","Link")</li>
+                                <li>@Html.ActionLink("300s","Index","Link")</li>
+                                <li>@Html.ActionLink("400s","Index","Link")</li>
+                                <li>@Html.ActionLink("500s","Index","Link")</li>
+                                <li>@Html.ActionLink("600s","Index","Link")</li>
+                                <li>@Html.ActionLink("700s","Index","Link")</li>
+                                <li>@Html.ActionLink("800s","Index","Link")</li>
+                                <li>@Html.ActionLink("900s","Index","Link")</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                <li><a>Sony</a>
+                <li><a>Interstates by Region</a>
                     <ul class="subtop">
-                        <li><a href="~/Views/Home/Contact">Games</a></li>
+                        <li><a href="~/Views/Home/Contact">Midwest</a></li>
+                        <li><a href="~/Views/Home/Contact">Northeast</a></li>
+                        <li><a href="~/Views/Home/Contact">Southeast</a></li>
+                        <li><a href="~/Views/Home/Contact">Southwest</a></li>
+                        <li><a href="~/Views/Home/Contact">West</a></li>
+                    </ul>
+                </li>
+                <li>Michael C's Travel Log</li>
+                <li><a>Other Links</a>
+                    <ul class="subtop">
+                        <li><a href="http://www.interstate-guide.com/">AARoads Interstate Guide</a></li>
                     </ul>
                 </li>
             </ul>
-        </div>-->
-        <div id="container">
-            <div id="headcenter">
-                    Michael C's Interstate Travel Site
-                </div>
-            <div id ="header">
-               <ul class="top">
-                <li><a>Interstates</a>
-                    <ul class="subtop">
-                        <li>@Html.ActionLink("2-Digit","Index","Link")
-                            <ul class ="subtop2">
-                            <li>241</li>
-                        </ul>
-                        </li>
-                        <li>@Html.ActionLink("3-Digit","Index","Link")</li>
-                    </ul>
-                </li><li><a>Sony</a>
-                    <ul class="subtop">
-                        <li><a href="~/Views/Home/Contact">Games</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
+        </div>
             <div id="main">
                this is  box
                     @RenderBody()
                 </div>
-        </div>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>
